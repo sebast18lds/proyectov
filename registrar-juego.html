@@ -1,0 +1,414 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="description" content="Responsive Bootstrap4 Shop Template, Created by Imran Hossain from https://imransdesign.com/">
+
+	<!-- title -->
+	<title>Registrar Juego</title>
+
+	<!-- favicon -->
+    <link rel="shortcut icon" type="image/png" href="assets/img/favicon.png">
+    <!-- google font -->
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Poppins:400,700&display=swap" rel="stylesheet">
+    <!-- fontawesome -->
+    <link rel="stylesheet" href="assets/css/all.min.css">
+    <!-- bootstrap -->
+    <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
+    <!-- owl carousel -->
+    <link rel="stylesheet" href="assets/css/owl.carousel.css">
+    <!-- magnific popup -->
+    <link rel="stylesheet" href="assets/css/magnific-popup.css">
+    <!-- animate css -->
+    <link rel="stylesheet" href="assets/css/animate.css">
+    <!-- mean menu css -->
+    <link rel="stylesheet" href="assets/css/meanmenu.min.css">
+    <!-- main style -->
+    <link rel="stylesheet" href="assets/css/main.css">
+    <!-- responsive -->
+    <link rel="stylesheet" href="assets/css/responsive.css">
+    <!-- modals-->
+    <script src="assets/js/jquery-modal.js"></script>
+    <link rel="stylesheet" href="assets/css/modals.css">
+
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.11.5/css/jquery.dataTables.min.css">
+</head>
+<body>
+	
+	<!--Pantalla de carga - Inicio -->
+    <div class="loader">
+        <div class="loader-inner">
+            <div class="circle"></div>
+        </div>
+    </div>
+    <!--Pantalla de carga - Final -->
+	
+	<!-- Encabezado - Inicio -->
+	<div class="top-header-area" id="sticker">
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-12 col-sm-12 text-center">
+					<div class="main-menu-wrap">
+						<!-- Logo - Inicio -->
+						<div class="site-logo">
+							<a href="index.html">
+								<img src="assets/img/logo.png" alt="">
+							</a>
+						</div>
+						<!-- Logo - Final -->
+
+						<!-- Navbar - Inicio -->
+						<nav class="main-menu">
+							<ul>
+								<!--<li><a href="index.html">Inicio</a></li>
+                                <li><a href="nosotros.html">Nosotros</a></li>-->
+								
+								<li><a href="#">Juegos</a>
+									<ul class="sub-menu">
+										<li><a href="registrar-juego.html">Registrar Juego</a></li>
+										<li><a href="listar-juegos.html">Listar Juegos</a></li>
+										<hr/>
+										<li><a href="registrar-genero-juego.html">Registrar Género de Juego</a></li>
+										<li><a href="listar-generos-juegos.html">Listar Géneros de Juegos</a></li>
+									</ul>
+								</li>
+								<li><a href="#">Usuarios</a>
+									<ul class="sub-menu">
+										<li>Empleados</li>
+										<li><a href="registrar-empleado.html">Registrar Empleado</a></li>
+										<li><a href="listar-empleados.html">Listar Empleados</a></li>
+										<hr/>
+										<li>Clientes</li>
+										<li><a href="sign-up.html">Registrar Cliente</a></li>
+										<li><a href="listar-clientes.html">Listar Clientes</a></li>
+									</ul>
+								</li>
+								<li><a href="#">Ingresos/Egresos</a>
+									<ul class="sub-menu">
+										<li>Ventas</li>
+										<li><a href="registrar-venta.html">Registrar Venta</a></li>
+										<li><a href="listar-ventas.html">Listar Ventas</a></li>
+										<hr/>
+										<li>Compras</li>
+										<li><a href="registrar-compra.html">Registrar Compra</a></li>
+										<li><a href="listar-compra.html">Listar Compras</a></li>
+										<hr/>
+										<li>Facturas</li>
+										<li><a href="registrar-factura.html">Registrar Factura</a></li>
+										<li><a href="listar-facturas.html">Listar Factura</a></li>
+									</ul>
+								</li>
+								<li><a href="#">Proveedores</a>
+									<ul class="sub-menu">
+										<li><a href="registrar-proveedor.html">Registrar Proveedor</a></li>
+										<li><a href="listar-proveedores.html">Listar Proveedores</a></li>
+									</ul>
+								</li>
+								<li>
+                                    <div class="header-icons">
+                                        <!--
+                                        <a class="shopping-cart" href="cart.html"><i class="fas fa-shopping-cart"></i></a>
+                                        -->
+                                        <a class="mobile-hide search-bar-icon" href="#"><i class="fas fa-search"></i></a>
+                                        <!--
+                                        <a class="user" href=""><i class="fas fa-user"></i></a>
+                                        <ul class="sub-menu">
+                                            <li><a href="#" data-toggle="modal" data-target="#loginModal">Ingresar</a></li>
+                                            <li><a href="sign-up.html">Registrarse</a></li>
+                                        </ul>
+                                        -->
+                                    </div>
+                                </li>
+							</ul>
+						</nav>
+						<a class="mobile-show search-bar-icon" href="#"><i class="fas fa-search"></i></a>
+						<div class="mobile-menu"></div>
+						<!-- Navbar - Final -->
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- Encabezado - Final -->
+
+	<!-- Ventana modal login - Inicio -->
+	<div class="modal fade" id="loginModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-header border-bottom-0">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <div class="form-title text-center">
+                        <h4>Logueate</h4>
+                    </div>
+                    <div class="d-flex flex-column text-center">
+                        <form name="login">
+                            <div class="form-group">
+                                <input type="email" name="usuario" class="form-control" id="usuario" placeholder="Tu correo...">
+                            </div>
+                            <div class="form-group">
+                                <input type="password" name="password" class="form-control" id="password1" placeholder="Tu contraseña...">
+                            </div>
+                            <button type="button" onclick="Login()" class="btn btn-info btn-block btn-round">Ingresar</button>
+                        </form>
+                    </div>
+                </div>
+                <div class="modal-footer d-flex justify-content-center">
+                    <div class="signup-section">¿Aún no tienes una cuenta? <a href="#a" class="text-info"> Registrate</a>.</div>
+                </div>
+            </div>
+        </div>
+    </div>
+	<!-- Ventana modal login - Final -->
+
+	
+
+	<!-- Buscador - Inicio -->
+	<div class="search-area">
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-12">
+					<span class="close-btn"><i class="fas fa-window-close"></i></span>
+					<div class="search-bar">
+						<div class="search-bar-tablecell">
+							<h3>¿Qué quieres buscar?</h3>
+							<input type="text" placeholder="Palabra clave">
+							<button type="submit">Buscar <i class="fas fa-search"></i></button>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- Buscador - Final -->
+	
+	<!-- Letrero - Inicio -->
+	<div class="breadcrumb-section breadcrumb-bg">
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-8 offset-lg-2 text-center">
+					<div class="breadcrumb-text">
+						<p>Formulario</p>
+						<h1>Registro de juegos</h1>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- Letrero - Final -->
+
+	<!-- Registro - Inicio -->
+	<div class="contact-from-section mt-150 mb-150">
+		<div class="container">
+			<form>
+				<div class="form-row">
+					<!-- Nombre del juego -->
+					<div class="col">
+						<label for="nombreJuego">Nombre del juego</label>
+						<input type="text" class="form-control" placeholder="Nombre" required>
+					</div>
+					<!-- Fecha de lanzamiento del juego -->
+					<div class="col">
+						<label for="lanzamiendoJuego">Fecha de lanzamiento</label>
+						<input type="date" class="form-control" placeholder="Lanzamiento" required>
+					</div>
+				</div>
+				<br/>
+				<div class="form-row">
+					<!-- Desarrollador del juego -->
+					<div class="col">
+						<label for="desarrolladorJuego">Desarrollador del juego</label>
+						<input type="text" class="form-control" placeholder="Desarrollador" required>
+					</div>
+					<!-- Editor del juego -->
+					<div class="col">
+						<label for="editorJuego">Editor del juego</label>
+						<input type="text" class="form-control" placeholder="Editor" required>
+					</div>
+				</div>
+				<br/>
+				<!-- Descripción del juego -->
+				<div class="form-group">
+					<label for="descripcionJuego">Descripción del juego</label>
+					<textarea class="form-control" id="descripcionJuego" placeholder="Ingrese una descripción"
+						name="descripcionTitulo" rows="2" required></textarea>
+				</div>
+				<div class="row">
+					<!-- Género del juego -->
+					<div class="col">
+						<label for="generoJuego">Género del juego</label>
+						<input type="text" class="form-control" placeholder="Género" required>
+					</div>
+					<!-- Multijugador -->
+					<div class="col">
+						<label for="multijugadorJuego">¿Es multijugador? (Online)</label>
+						<br/>
+						<div class="form-check-inline">
+							<label class="form-check-label">
+								<input type="checkbox" class="form-check-input" value="">Sí
+							</label>
+						  </div>
+						  <div class="form-check-inline">
+							<label class="form-check-label">
+								<input type="checkbox" class="form-check-input" value="">No
+							</label>
+						  </div>
+					</div>
+				</div>
+				<br/>
+				<!-- ESRB del juego -->
+				<div class="form-row">
+					<div class="col">
+						<label for="esrbJuego">Clasificación ESRB</label>
+						<select class="form-control" id="esrbJuego" required>
+							<option disabled selected value>- Elija una clasificación -</option>
+							<option>Everyone</option>
+							<option>Everyone +10</option>
+							<option>Teen</option>
+							<option>Mature +17</option>
+							<option>Adults Only +18</option>
+							<option>Rating Pending</option>
+							<option>Rating Pending - Likely Mature +17</option>
+						</select>
+					</div>
+					<!-- Precio de venta -->
+					<div class="col">
+						<label for="precioJuego">Precio de venta</label>
+						<input type="number" class="form-control" placeholder="Precio" required>
+					</div>
+				</div>
+				<br/>
+	
+				<!-- Consola del juego -->
+				<div class="form-group">
+					<label for="consolaJuego">Consola del juego</label>
+					<select class="custom-select" required>
+						<option disabled selected value>- Elija una consola -</option>
+						<option>Nintendo Switch</option>
+						<option>PlayStation 5</option>
+						<option>PlayStation 4</option>
+						<option>Xbox Series X/S</option>
+						<option>Xbox One</option>
+					</select>
+				</div>
+				<br/>
+	
+				<div class="form-btns">
+					<button type="submit">Enviar formulario</button>
+					<button type="reset">Limpiar formulario</button>
+				</div>
+			</form>
+		</div>
+	</div>
+	<!-- Registro - Final -->
+
+	<!-- Footer - Inicio -->
+	<div class="footer-area">
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-3 col-md-6">
+					<div class="footer-box about-widget">
+						<h2 class="widget-title">Acerca de nosotros</h2>
+						<p>Somos una nueva compañía conformada por la gente más capacitada para traer los mejores juegos de consolas a nuestros clientes.</p>
+					</div>
+				</div>
+				<div class="col-lg-3 col-md-6">
+					<div class="footer-box get-in-touch">
+						<h2 class="widget-title">Ponte en contacto</h2>
+						<ul>
+							<li>Complejo Ruta N Calle 67 52-20 Piso 2 Torre A, Medellín, Antioquia</li>
+							<li>soporte@instantgamers.com</li>
+							<li>+57 313 679 3126</li>
+						</ul>
+					</div>
+				</div>
+				<div class="col-lg-3 col-md-6">
+					<div class="footer-box pages">
+						<h2 class="widget-title">Páginas</h2>
+						<ul>
+							<li><a href="index.html">Inicio</a></li>
+							
+							<li><a href="services.html">Juegos</a></li>
+							<li><a href="news.html">Usuarios</a></li>
+							<li><a href="contact.html">Ingresos/Egresos</a></li>
+							<li><a href="contact.html">Proveedores</a></li>
+						</ul>
+					</div>
+				</div>
+				<div class="col-lg-3 col-md-6">
+					<div class="footer-box subscribe">
+						<h2 class="widget-title">Suscríbete</h2>
+						<p>Suscríbete para estar al tanto de las novedades en la tienda</p>
+						<form action="index.html">
+							<input type="email" placeholder="Email">
+							<button type="submit"><i class="fas fa-paper-plane"></i></button>
+						</form>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- Footer - Final -->
+	
+	<!-- copyright -->
+	<!--
+	<div class="copyright">
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-6 col-md-12">
+					<p>Copyrights &copy; 2019 - <a href="https://imransdesign.com/">Imran Hossain</a>,  All Rights Reserved.<br>
+						Distributed By - <a href="https://themewagon.com/">Themewagon</a>
+					</p>
+				</div>
+				<div class="col-lg-6 text-right col-md-12">
+					<div class="social-icons">
+						<ul>
+							<li><a href="#" target="_blank"><i class="fab fa-facebook-f"></i></a></li>
+							<li><a href="#" target="_blank"><i class="fab fa-twitter"></i></a></li>
+							<li><a href="#" target="_blank"><i class="fab fa-instagram"></i></a></li>
+							<li><a href="#" target="_blank"><i class="fab fa-linkedin"></i></a></li>
+							<li><a href="#" target="_blank"><i class="fab fa-dribbble"></i></a></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	-->
+	<!-- end copyright -->
+	
+	<!-- jquery -->
+    <script src="assets/js/jquery-1.11.3.min.js"></script>
+    <!-- bootstrap -->
+    <script src="assets/bootstrap/js/bootstrap.min.js"></script>
+    <!-- count down -->
+    <script src="assets/js/jquery.countdown.js"></script>
+    <!-- isotope -->
+    <script src="assets/js/jquery.isotope-3.0.6.min.js"></script>
+    <!-- waypoints -->
+    <script src="assets/js/waypoints.js"></script>
+    <!-- owl carousel -->
+    <script src="assets/js/owl.carousel.min.js"></script>
+    <!-- magnific popup -->
+    <script src="assets/js/jquery.magnific-popup.min.js"></script>
+    <!-- mean menu -->
+    <script src="assets/js/jquery.meanmenu.min.js"></script>
+    <!-- sticker js -->
+    <script src="assets/js/sticker.js"></script>
+    <!-- main js -->
+    <script src="assets/js/main.js"></script>
+    <script src="https://cdn.datatables.net/1.11.5/js/jquery.dataTables.min.js"></script>
+    <!-- DATA TABLE -->
+    <script src="assets/js/data-table-mod.js"></script>
+    <!-- MODAL LOGIN -->
+    <script src="assets/js/modal-login.js"></script>
+	
+	
+</body>
+</html>

@@ -1,0 +1,2049 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="description" content="Responsive Bootstrap4 Shop Template, Created by Imran Hossain from https://imransdesign.com/">
+
+	<!-- title -->
+	<title>Listado de Juegos</title>
+
+	<!-- favicon -->
+    <link rel="shortcut icon" type="image/png" href="assets/img/favicon.png">
+    <!-- google font -->
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Poppins:400,700&display=swap" rel="stylesheet">
+    <!-- fontawesome -->
+    <link rel="stylesheet" href="assets/css/all.min.css">
+    <!-- bootstrap -->
+    <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
+    <!-- owl carousel -->
+    <link rel="stylesheet" href="assets/css/owl.carousel.css">
+    <!-- magnific popup -->
+    <link rel="stylesheet" href="assets/css/magnific-popup.css">
+    <!-- animate css -->
+    <link rel="stylesheet" href="assets/css/animate.css">
+    <!-- mean menu css -->
+    <link rel="stylesheet" href="assets/css/meanmenu.min.css">
+    <!-- main style -->
+    <link rel="stylesheet" href="assets/css/main.css">
+    <!-- responsive -->
+    <link rel="stylesheet" href="assets/css/responsive.css">
+    <!-- modals-->
+    <script src="assets/js/jquery-modal.js"></script>
+    <link rel="stylesheet" href="assets/css/modals.css">
+
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.11.5/css/jquery.dataTables.min.css">
+
+</head>
+<body>
+	
+	<!--Pantalla de carga - Inicio -->
+    <div class="loader">
+        <div class="loader-inner">
+            <div class="circle"></div>
+        </div>
+    </div>
+    <!--Pantalla de carga - Final -->
+	
+	<!-- Encabezado - Inicio -->
+	<div class="top-header-area" id="sticker">
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-12 col-sm-12 text-center">
+					<div class="main-menu-wrap">
+						<!-- Logo - Inicio -->
+						<div class="site-logo">
+							<a href="index.html">
+								<img src="assets/img/logo.png" alt="">
+							</a>
+						</div>
+						<!-- Logo - Final -->
+
+						<!-- Navbar - Inicio -->
+						<nav class="main-menu">
+							<ul>
+								<!--<li><a href="index.html">Inicio</a></li>
+                                <li><a href="nosotros.html">Nosotros</a></li>-->
+								
+								<li><a href="#">Juegos</a>
+									<ul class="sub-menu">
+										<li><a href="registrar-juego.html">Registrar Juego</a></li>
+										<li><a href="listar-juegos.html">Listar Juegos</a></li>
+										<hr/>
+										<li><a href="registrar-genero-juego.html">Registrar Género de Juego</a></li>
+										<li><a href="listar-generos-juegos.html">Listar Géneros de Juegos</a></li>
+									</ul>
+								</li>
+								<li><a href="#">Usuarios</a>
+									<ul class="sub-menu">
+										<li>Empleados</li>
+										<li><a href="registrar-empleado.html">Registrar Empleado</a></li>
+										<li><a href="listar-empleados.html">Listar Empleados</a></li>
+										<hr/>
+										<li>Clientes</li>
+										<li><a href="sign-up.html">Registrar Cliente</a></li>
+										<li><a href="listar-clientes.html">Listar Clientes</a></li>
+									</ul>
+								</li>
+								<li><a href="#">Ingresos/Egresos</a>
+									<ul class="sub-menu">
+										<li>Ventas</li>
+										<li><a href="registrar-venta.html">Registrar Venta</a></li>
+										<li><a href="listar-ventas.html">Listar Ventas</a></li>
+										<hr/>
+										<li>Compras</li>
+										<li><a href="registrar-compra.html">Registrar Compra</a></li>
+										<li><a href="listar-compra.html">Listar Compras</a></li>
+										<hr/>
+										<li>Facturas</li>
+										<li><a href="registrar-factura.html">Registrar Factura</a></li>
+										<li><a href="listar-facturas.html">Listar Factura</a></li>
+									</ul>
+								</li>
+								<li><a href="#">Proveedores</a>
+									<ul class="sub-menu">
+										<li><a href="registrar-proveedor.html">Registrar Proveedor</a></li>
+										<li><a href="listar-proveedores.html">Listar Proveedores</a></li>
+									</ul>
+								</li>
+								<li>
+                                    <div class="header-icons">
+                                        <!--
+                                        <a class="shopping-cart" href="cart.html"><i class="fas fa-shopping-cart"></i></a>
+                                        -->
+                                        <a class="mobile-hide search-bar-icon" href="#"><i class="fas fa-search"></i></a>
+                                        <!--
+                                        <a class="user" href=""><i class="fas fa-user"></i></a>
+                                        <ul class="sub-menu">
+                                            <li><a href="#" data-toggle="modal" data-target="#loginModal">Ingresar</a></li>
+                                            <li><a href="sign-up.html">Registrarse</a></li>
+                                        </ul>
+                                        -->
+                                    </div>
+                                </li>
+							</ul>
+						</nav>
+						<a class="mobile-show search-bar-icon" href="#"><i class="fas fa-search"></i></a>
+						<div class="mobile-menu"></div>
+						<!-- Navbar - Final -->
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- Encabezado - Final -->
+
+	<!-- Ventana modal login - Inicio -->
+	<div class="modal fade" id="loginModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-header border-bottom-0">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <div class="form-title text-center">
+                        <h4>Logueate</h4>
+                    </div>
+                    <div class="d-flex flex-column text-center">
+                        <form name="login">
+                            <div class="form-group">
+                                <input type="email" name="usuario" class="form-control" id="usuario" placeholder="Tu correo...">
+                            </div>
+                            <div class="form-group">
+                                <input type="password" name="password" class="form-control" id="password1" placeholder="Tu contraseña...">
+                            </div>
+                            <button type="button" onclick="Login()" class="btn btn-info btn-block btn-round">Ingresar</button>
+                        </form>
+                    </div>
+                </div>
+                <div class="modal-footer d-flex justify-content-center">
+                    <div class="signup-section">¿Aún no tienes una cuenta? <a href="#a" class="text-info"> Registrate</a>.</div>
+                </div>
+            </div>
+        </div>
+    </div>
+	<!-- Ventana modal login - Final -->
+
+	<!-- Buscador - Inicio -->
+	<div class="search-area">
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-12">
+					<span class="close-btn"><i class="fas fa-window-close"></i></span>
+					<div class="search-bar">
+						<div class="search-bar-tablecell">
+							<h3>¿Qué quieres buscar?</h3>
+							<input type="text" placeholder="Palabra clave">
+							<button type="submit">Buscar <i class="fas fa-search"></i></button>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- Buscador - Final -->
+	
+	<!-- Letrero - Inicio -->
+	<div class="breadcrumb-section breadcrumb-bg">
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-8 offset-lg-2 text-center">
+					<div class="breadcrumb-text">
+						<p>Listado</p>
+						<h1>Juegos</h1>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- Letrero - Final -->
+
+	<!-- Cuerpo - Inicio -->
+	<div class="listar-juegos mt-150 mb-150">
+		<div class="contenedor">
+			<h3>Lista de juegos</h3>
+			<br/>
+			<div class="table-responsive">
+				<table id="lista" class="table table-striped table-hover">
+					<thead>
+						<tr>
+							<th>#</th>
+							<th>Nombre</th>
+							<th>Lanzamiento</th>
+							<th>Desarrollador</th>
+							<th>Editor</th>
+							<th>Género</th>
+							<th>Multijugador</th>
+							<th>ESRB</th>
+							<th>Cantidad</th>
+							<th>Precio</th>
+							<th>Consola</th>
+							<th>Habilitado</th>
+							<th>Acciones</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td>1</td>
+							<td>Halo Infinite</td>
+							<td>15/11/2021</td>
+							<td>343 Industries</td>
+							<td>Xbox Game Studios</td>
+							<td>FPS</td>
+							<td>No</td>
+							<td>Teen</td>
+							<td>199</td>
+							<td>214900</td>
+							<td>Xbox Series X/S</td>
+							<td>Sí</td>
+							<td>
+								<button type="button" class="btn btn-info" data-toggle="modal" data-target="#ver1"> <i class="fas fa-eye"></i> </button>
+		
+								<!-- The Modal -->
+								<div class="modal fade" id="ver1">
+									<div class="modal-dialog modal-dialog-scrollable">
+										<div class="modal-content">
+		
+											<!-- Modal Header -->
+											<div class="modal-header">
+												<h4 class="modal-title">Detalles</h4>
+												<button type="button" class="close" data-dismiss="modal">&times;</button>
+											</div>
+		
+											<!-- Modal body -->
+											<div class="modal-body">
+												<table class="table table-striped">
+													<thead>
+														<th>Ver</th>
+													</thead>
+													<tr>
+														<td><label for="">#</label></td>
+														<td><input type="number" value="1" disabled> </td>
+													</tr>
+													<tr>
+														<td><label for="">Nombre</label></td>
+														<td><input type="text" value="Halo Infinite" disabled> </td>
+													</tr>
+													<tr>
+														<td> <label for="">Lanzamiento</label></td>
+														<td><input type="date" value="15/11/2021" disabled></td>
+													</tr>
+													<tr>
+														<td> <label for="">Desarrollador</label></td>
+														<td><input type="text" value="343 Industries" disabled></td>
+													</tr>
+													<tr>
+														<td><label for="">Editor</label></td>
+														<td><input type="text" value="Xbox Game Studios" disabled> </td>
+													</tr>
+													<tr>
+														<td><label for="">Género</label></td>
+														<td><input type="text" value="FPS" disabled> </td>
+													</tr>
+													<tr>
+														<td> <label for="">Multijugador</label></td>
+														<td><input type="text" value="No" disabled></td>
+													</tr>
+													<tr>
+														<td> <label for="">ESRB</label></td>
+														<td><input type="text" value="Teen" disabled></td>
+													</tr>
+													<tr>
+														<td> <label for="">Cantidad</label></td>
+														<td><input type="number" value="199" disabled></td>
+													</tr>
+													<tr>
+														<td> <label for="">Precio</label></td>
+														<td><input type="number" value="214900" disabled></td>
+													</tr>
+													<tr>
+														<td> <label for="">Consola</label></td>
+														<td><input type="text" value="Xbox Series X/S" disabled></td>
+													</tr>
+													<tr>
+														<td> <label for="">Habilitado</label></td>
+														<td><input type="text" value="Sí" disabled></td>
+													</tr>
+												</table>
+											</div>
+		
+											<!-- Modal footer -->
+											<div class="modal-footer">
+												<button type="button" class="btn btn-danger" data-dismiss="modal">Cerrar</button>
+											</div>
+										</div>
+									</div>
+								</div>
+								
+								<button type="button" class="btn btn-success" data-toggle="modal" data-target="#modalMod"><i class="fas fa-edit"></i></button>
+								
+								<!-- The Modal -->
+								<div class="modal fade" id="modalMod">
+									<div class="modal-dialog modal-dialog-scrollable">
+										<div class="modal-content">
+		
+											<!-- Modal Header -->
+											<div class="modal-header">
+												<h4 class="modal-title">Editar</h4>
+												<button type="button" class="close" data-dismiss="modal">&times;</button>
+											</div>
+											<!-- Modal body -->
+											<div class="modal-body">
+												<table class="table table-striped">
+													<thead>
+														<th>Editar</th>
+													</thead>
+													<tr>
+														<td><label for="">#</label></td>
+														<td><input type="number" value="1"> </td>
+													</tr>
+													<tr>
+														<td><label for="">Nombre</label></td>
+														<td><input type="text" value="Halo Infinite"> </td>
+													</tr>
+													<tr>
+														<td> <label for="">Lanzamiento</label></td>
+														<td><input type="date" value="15/11/2021"></td>
+													</tr>
+													<tr>
+														<td> <label for="">Desarrollador</label></td>
+														<td><input type="text" value="343 Industries"></td>
+													</tr>
+													<tr>
+														<td><label for="">Editor</label></td>
+														<td><input type="text" value="Xbox Game Studios"> </td>
+													</tr>
+													<tr>
+														<td><label for="">Género</label></td>
+														<td><input type="text" value="FPS"> </td>
+													</tr>
+													<tr>
+														<td> <label for="">Multijugador</label></td>
+														<td><input type="text" value="No"></td>
+													</tr>
+													<tr>
+														<td> <label for="">ESRB</label></td>
+														<td><input type="text" value="Teen"></td>
+													</tr>
+													<tr>
+														<td> <label for="">Cantidad</label></td>
+														<td><input type="number" value="199"></td>
+													</tr>
+													<tr>
+														<td> <label for="">Precio</label></td>
+														<td><input type="number" value="214900"></td>
+													</tr>
+													<tr>
+														<td> <label for="">Consola</label></td>
+														<td><input type="text" value="Xbox Series X/S"></td>
+													</tr>
+													<tr>
+														<td> <label for="">Habilitado</label></td>
+														<td><input type="text" value="Sí"></td>
+													</tr>
+												</table>
+											</div>
+											<!-- Modal footer -->
+											<div class="modal-footer">
+												<button type="button" class="btn btn-success" data-dismiss="modal">Guardar</button>
+												<button type="button" class="btn btn-danger" data-dismiss="modal">Cerrar</button>
+											</div>
+										</div>
+									</div>
+								</div>
+								<button type="button" class="btn btn-danger"><i class="fas fa-trash"></i></button>
+							</td>
+						</tr>
+						<tr>
+							<td>2</td> <!--#-->
+							<td>Horizon Zero Dawn</td> <!--Nombre-->
+							<td>07/08/2020</td> <!--Lanzamiento-->
+							<td>Guerrilla</td> <!--Desarrollador--> 
+							<td>Sony Interactive Entertainment</td> <!--Editor-->
+							<td>Mundo abierto</td> <!--Género-->
+							<td>No</td> <!--Multijugador-->
+							<td>Teen</td> <!--ESRB-->
+							<td>50</td> <!--Cantidad-->
+							<td>159000</td> <!--Precio-->
+							<td>PlayStation 4</td> <!--Consola-->
+							<td>Sí</td> <!--Habilitado-->
+							<td>
+								<button type="button" class="btn btn-info" data-toggle="modal" data-target="#ver1"> <i class="fas fa-eye"></i> </button>
+		
+								<!-- The Modal -->
+								<div class="modal fade" id="ver1">
+									<div class="modal-dialog modal-dialog-scrollable">
+										<div class="modal-content">
+		
+											<!-- Modal Header -->
+											<div class="modal-header">
+												<h4 class="modal-title">Detalles</h4>
+												<button type="button" class="close" data-dismiss="modal">&times;</button>
+											</div>
+		
+											<!-- Modal body -->
+											<div class="modal-body">
+												<table class="table table-striped">
+													<thead>
+														<th>Ver</th>
+													</thead>
+													<tr>
+														<td><label for="">#</label></td>
+														<td><input type="number" value="1" disabled> </td>
+													</tr>
+													<tr>
+														<td><label for="">Nombre</label></td>
+														<td><input type="text" value="Halo Infinite" disabled> </td>
+													</tr>
+													<tr>
+														<td> <label for="">Lanzamiento</label></td>
+														<td><input type="date" value="15/11/2021" disabled></td>
+													</tr>
+													<tr>
+														<td> <label for="">Desarrollador</label></td>
+														<td><input type="text" value="343 Industries" disabled></td>
+													</tr>
+													<tr>
+														<td><label for="">Editor</label></td>
+														<td><input type="text" value="Xbox Game Studios" disabled> </td>
+													</tr>
+													<tr>
+														<td><label for="">Género</label></td>
+														<td><input type="text" value="FPS" disabled> </td>
+													</tr>
+													<tr>
+														<td> <label for="">Multijugador</label></td>
+														<td><input type="text" value="No" disabled></td>
+													</tr>
+													<tr>
+														<td> <label for="">ESRB</label></td>
+														<td><input type="text" value="Teen" disabled></td>
+													</tr>
+													<tr>
+														<td> <label for="">Cantidad</label></td>
+														<td><input type="number" value="199" disabled></td>
+													</tr>
+													<tr>
+														<td> <label for="">Precio</label></td>
+														<td><input type="number" value="214900" disabled></td>
+													</tr>
+													<tr>
+														<td> <label for="">Consola</label></td>
+														<td><input type="text" value="Xbox Series X/S" disabled></td>
+													</tr>
+													<tr>
+														<td> <label for="">Habilitado</label></td>
+														<td><input type="text" value="Sí" disabled></td>
+													</tr>
+												</table>
+											</div>
+		
+											<!-- Modal footer -->
+											<div class="modal-footer">
+												<button type="button" class="btn btn-danger" data-dismiss="modal">Cerrar</button>
+											</div>
+										</div>
+									</div>
+								</div>
+								
+								<button type="button" class="btn btn-success" data-toggle="modal" data-target="#modalMod"><i class="fas fa-edit"></i></button>
+								
+								<!-- The Modal -->
+								<div class="modal fade" id="modalMod">
+									<div class="modal-dialog modal-dialog-scrollable">
+										<div class="modal-content">
+		
+											<!-- Modal Header -->
+											<div class="modal-header">
+												<h4 class="modal-title">Editar</h4>
+												<button type="button" class="close" data-dismiss="modal">&times;</button>
+											</div>
+											<!-- Modal body -->
+											<div class="modal-body">
+												<table class="table table-striped">
+													<thead>
+														<th>Editar</th>
+													</thead>
+													<tr>
+														<td><label for="">#</label></td>
+														<td><input type="number" value="1"> </td>
+													</tr>
+													<tr>
+														<td><label for="">Nombre</label></td>
+														<td><input type="text" value="Halo Infinite"> </td>
+													</tr>
+													<tr>
+														<td> <label for="">Lanzamiento</label></td>
+														<td><input type="date" value="15/11/2021"></td>
+													</tr>
+													<tr>
+														<td> <label for="">Desarrollador</label></td>
+														<td><input type="text" value="343 Industries"></td>
+													</tr>
+													<tr>
+														<td><label for="">Editor</label></td>
+														<td><input type="text" value="Xbox Game Studios"> </td>
+													</tr>
+													<tr>
+														<td><label for="">Género</label></td>
+														<td><input type="text" value="FPS"> </td>
+													</tr>
+													<tr>
+														<td> <label for="">Multijugador</label></td>
+														<td><input type="text" value="No"></td>
+													</tr>
+													<tr>
+														<td> <label for="">ESRB</label></td>
+														<td><input type="text" value="Teen"></td>
+													</tr>
+													<tr>
+														<td> <label for="">Cantidad</label></td>
+														<td><input type="number" value="199"></td>
+													</tr>
+													<tr>
+														<td> <label for="">Precio</label></td>
+														<td><input type="number" value="214900"></td>
+													</tr>
+													<tr>
+														<td> <label for="">Consola</label></td>
+														<td><input type="text" value="Xbox Series X/S"></td>
+													</tr>
+													<tr>
+														<td> <label for="">Habilitado</label></td>
+														<td><input type="text" value="Sí"></td>
+													</tr>
+												</table>
+											</div>
+											<!-- Modal footer -->
+											<div class="modal-footer">
+												<button type="button" class="btn btn-success" data-dismiss="modal">Guardar</button>
+												<button type="button" class="btn btn-danger" data-dismiss="modal">Cerrar</button>
+											</div>
+										</div>
+									</div>
+								</div>
+								<button type="button" class="btn btn-danger"><i class="fas fa-trash"></i></button>
+							</td>
+						</tr>
+						<tr>
+							<td>3</td> <!--#-->
+							<td>Pokémon Legends Arceus</td> <!--Nombre-->
+							<td>28/01/2022</td> <!--Lanzamiento-->
+							<td>Game Freak</td> <!--Desarrollador--> 
+							<td>Nintendo</td> <!--Editor-->
+							<td>RPG</td> <!--Género-->
+							<td>No</td> <!--Multijugador-->
+							<td>Everyone</td> <!--ESRB-->
+							<td>0</td> <!--Cantidad-->
+							<td>220000</td> <!--Precio-->
+							<td>Nintendo Switch</td> <!--Consola-->
+							<td>No</td> <!--Habilitado-->
+							<td>
+								<button type="button" class="btn btn-info" data-toggle="modal" data-target="#ver1"> <i class="fas fa-eye"></i> </button>
+		
+								<!-- The Modal -->
+								<div class="modal fade" id="ver1">
+									<div class="modal-dialog modal-dialog-scrollable">
+										<div class="modal-content">
+		
+											<!-- Modal Header -->
+											<div class="modal-header">
+												<h4 class="modal-title">Detalles</h4>
+												<button type="button" class="close" data-dismiss="modal">&times;</button>
+											</div>
+		
+											<!-- Modal body -->
+											<div class="modal-body">
+												<table class="table table-striped">
+													<thead>
+														<th>Ver</th>
+													</thead>
+													<tr>
+														<td><label for="">#</label></td>
+														<td><input type="number" value="1" disabled> </td>
+													</tr>
+													<tr>
+														<td><label for="">Nombre</label></td>
+														<td><input type="text" value="Halo Infinite" disabled> </td>
+													</tr>
+													<tr>
+														<td> <label for="">Lanzamiento</label></td>
+														<td><input type="date" value="15/11/2021" disabled></td>
+													</tr>
+													<tr>
+														<td> <label for="">Desarrollador</label></td>
+														<td><input type="text" value="343 Industries" disabled></td>
+													</tr>
+													<tr>
+														<td><label for="">Editor</label></td>
+														<td><input type="text" value="Xbox Game Studios" disabled> </td>
+													</tr>
+													<tr>
+														<td><label for="">Género</label></td>
+														<td><input type="text" value="FPS" disabled> </td>
+													</tr>
+													<tr>
+														<td> <label for="">Multijugador</label></td>
+														<td><input type="text" value="No" disabled></td>
+													</tr>
+													<tr>
+														<td> <label for="">ESRB</label></td>
+														<td><input type="text" value="Teen" disabled></td>
+													</tr>
+													<tr>
+														<td> <label for="">Cantidad</label></td>
+														<td><input type="number" value="199" disabled></td>
+													</tr>
+													<tr>
+														<td> <label for="">Precio</label></td>
+														<td><input type="number" value="214900" disabled></td>
+													</tr>
+													<tr>
+														<td> <label for="">Consola</label></td>
+														<td><input type="text" value="Xbox Series X/S" disabled></td>
+													</tr>
+													<tr>
+														<td> <label for="">Habilitado</label></td>
+														<td><input type="text" value="Sí" disabled></td>
+													</tr>
+												</table>
+											</div>
+		
+											<!-- Modal footer -->
+											<div class="modal-footer">
+												<button type="button" class="btn btn-danger" data-dismiss="modal">Cerrar</button>
+											</div>
+										</div>
+									</div>
+								</div>
+								
+								<button type="button" class="btn btn-success" data-toggle="modal" data-target="#modalMod"><i class="fas fa-edit"></i></button>
+								
+								<!-- The Modal -->
+								<div class="modal fade" id="modalMod">
+									<div class="modal-dialog modal-dialog-scrollable">
+										<div class="modal-content">
+		
+											<!-- Modal Header -->
+											<div class="modal-header">
+												<h4 class="modal-title">Editar</h4>
+												<button type="button" class="close" data-dismiss="modal">&times;</button>
+											</div>
+											<!-- Modal body -->
+											<div class="modal-body">
+												<table class="table table-striped">
+													<thead>
+														<th>Editar</th>
+													</thead>
+													<tr>
+														<td><label for="">#</label></td>
+														<td><input type="number" value="1"> </td>
+													</tr>
+													<tr>
+														<td><label for="">Nombre</label></td>
+														<td><input type="text" value="Halo Infinite"> </td>
+													</tr>
+													<tr>
+														<td> <label for="">Lanzamiento</label></td>
+														<td><input type="date" value="15/11/2021"></td>
+													</tr>
+													<tr>
+														<td> <label for="">Desarrollador</label></td>
+														<td><input type="text" value="343 Industries"></td>
+													</tr>
+													<tr>
+														<td><label for="">Editor</label></td>
+														<td><input type="text" value="Xbox Game Studios"> </td>
+													</tr>
+													<tr>
+														<td><label for="">Género</label></td>
+														<td><input type="text" value="FPS"> </td>
+													</tr>
+													<tr>
+														<td> <label for="">Multijugador</label></td>
+														<td><input type="text" value="No"></td>
+													</tr>
+													<tr>
+														<td> <label for="">ESRB</label></td>
+														<td><input type="text" value="Teen"></td>
+													</tr>
+													<tr>
+														<td> <label for="">Cantidad</label></td>
+														<td><input type="number" value="199"></td>
+													</tr>
+													<tr>
+														<td> <label for="">Precio</label></td>
+														<td><input type="number" value="214900"></td>
+													</tr>
+													<tr>
+														<td> <label for="">Consola</label></td>
+														<td><input type="text" value="Xbox Series X/S"></td>
+													</tr>
+													<tr>
+														<td> <label for="">Habilitado</label></td>
+														<td><input type="text" value="Sí"></td>
+													</tr>
+												</table>
+											</div>
+											<!-- Modal footer -->
+											<div class="modal-footer">
+												<button type="button" class="btn btn-success" data-dismiss="modal">Guardar</button>
+												<button type="button" class="btn btn-danger" data-dismiss="modal">Cerrar</button>
+											</div>
+										</div>
+									</div>
+								</div>
+								<button type="button" class="btn btn-danger"><i class="fas fa-trash"></i></button>
+							</td>
+						</tr>
+						<tr>
+							<td>4</td> <!--#-->
+							<td>Forza Horizon 5</td> <!--Nombre-->
+							<td>08/11/2021</td> <!--Lanzamiento-->
+							<td>Playground Games</td> <!--Desarrollador--> 
+							<td>Xbox Game Studios</td> <!--Editor-->
+							<td>Carreras</td> <!--Género-->
+							<td>Sí</td> <!--Multijugador-->
+							<td>Everyone</td> <!--ESRB-->
+							<td>500</td> <!--Cantidad-->
+							<td>214900</td> <!--Precio-->
+							<td>Xbox Series X/S</td> <!--Consola-->
+							<td>Sí</td> <!--Habilitado-->
+							<td>
+								<button type="button" class="btn btn-info" data-toggle="modal" data-target="#ver1"> <i class="fas fa-eye"></i> </button>
+		
+								<!-- The Modal -->
+								<div class="modal fade" id="ver1">
+									<div class="modal-dialog modal-dialog-scrollable">
+										<div class="modal-content">
+		
+											<!-- Modal Header -->
+											<div class="modal-header">
+												<h4 class="modal-title">Detalles</h4>
+												<button type="button" class="close" data-dismiss="modal">&times;</button>
+											</div>
+		
+											<!-- Modal body -->
+											<div class="modal-body">
+												<table class="table table-striped">
+													<thead>
+														<th>Ver</th>
+													</thead>
+													<tr>
+														<td><label for="">#</label></td>
+														<td><input type="number" value="1" disabled> </td>
+													</tr>
+													<tr>
+														<td><label for="">Nombre</label></td>
+														<td><input type="text" value="Halo Infinite" disabled> </td>
+													</tr>
+													<tr>
+														<td> <label for="">Lanzamiento</label></td>
+														<td><input type="date" value="15/11/2021" disabled></td>
+													</tr>
+													<tr>
+														<td> <label for="">Desarrollador</label></td>
+														<td><input type="text" value="343 Industries" disabled></td>
+													</tr>
+													<tr>
+														<td><label for="">Editor</label></td>
+														<td><input type="text" value="Xbox Game Studios" disabled> </td>
+													</tr>
+													<tr>
+														<td><label for="">Género</label></td>
+														<td><input type="text" value="FPS" disabled> </td>
+													</tr>
+													<tr>
+														<td> <label for="">Multijugador</label></td>
+														<td><input type="text" value="No" disabled></td>
+													</tr>
+													<tr>
+														<td> <label for="">ESRB</label></td>
+														<td><input type="text" value="Teen" disabled></td>
+													</tr>
+													<tr>
+														<td> <label for="">Cantidad</label></td>
+														<td><input type="number" value="199" disabled></td>
+													</tr>
+													<tr>
+														<td> <label for="">Precio</label></td>
+														<td><input type="number" value="214900" disabled></td>
+													</tr>
+													<tr>
+														<td> <label for="">Consola</label></td>
+														<td><input type="text" value="Xbox Series X/S" disabled></td>
+													</tr>
+													<tr>
+														<td> <label for="">Habilitado</label></td>
+														<td><input type="text" value="Sí" disabled></td>
+													</tr>
+												</table>
+											</div>
+		
+											<!-- Modal footer -->
+											<div class="modal-footer">
+												<button type="button" class="btn btn-danger" data-dismiss="modal">Cerrar</button>
+											</div>
+										</div>
+									</div>
+								</div>
+								
+								<button type="button" class="btn btn-success" data-toggle="modal" data-target="#modalMod"><i class="fas fa-edit"></i></button>
+								
+								<!-- The Modal -->
+								<div class="modal fade" id="modalMod">
+									<div class="modal-dialog modal-dialog-scrollable">
+										<div class="modal-content">
+		
+											<!-- Modal Header -->
+											<div class="modal-header">
+												<h4 class="modal-title">Editar</h4>
+												<button type="button" class="close" data-dismiss="modal">&times;</button>
+											</div>
+											<!-- Modal body -->
+											<div class="modal-body">
+												<table class="table table-striped">
+													<thead>
+														<th>Editar</th>
+													</thead>
+													<tr>
+														<td><label for="">#</label></td>
+														<td><input type="number" value="1"> </td>
+													</tr>
+													<tr>
+														<td><label for="">Nombre</label></td>
+														<td><input type="text" value="Halo Infinite"> </td>
+													</tr>
+													<tr>
+														<td> <label for="">Lanzamiento</label></td>
+														<td><input type="date" value="15/11/2021"></td>
+													</tr>
+													<tr>
+														<td> <label for="">Desarrollador</label></td>
+														<td><input type="text" value="343 Industries"></td>
+													</tr>
+													<tr>
+														<td><label for="">Editor</label></td>
+														<td><input type="text" value="Xbox Game Studios"> </td>
+													</tr>
+													<tr>
+														<td><label for="">Género</label></td>
+														<td><input type="text" value="FPS"> </td>
+													</tr>
+													<tr>
+														<td> <label for="">Multijugador</label></td>
+														<td><input type="text" value="No"></td>
+													</tr>
+													<tr>
+														<td> <label for="">ESRB</label></td>
+														<td><input type="text" value="Teen"></td>
+													</tr>
+													<tr>
+														<td> <label for="">Cantidad</label></td>
+														<td><input type="number" value="199"></td>
+													</tr>
+													<tr>
+														<td> <label for="">Precio</label></td>
+														<td><input type="number" value="214900"></td>
+													</tr>
+													<tr>
+														<td> <label for="">Consola</label></td>
+														<td><input type="text" value="Xbox Series X/S"></td>
+													</tr>
+													<tr>
+														<td> <label for="">Habilitado</label></td>
+														<td><input type="text" value="Sí"></td>
+													</tr>
+												</table>
+											</div>
+											<!-- Modal footer -->
+											<div class="modal-footer">
+												<button type="button" class="btn btn-success" data-dismiss="modal">Guardar</button>
+												<button type="button" class="btn btn-danger" data-dismiss="modal">Cerrar</button>
+											</div>
+										</div>
+									</div>
+								</div>
+								<button type="button" class="btn btn-danger"><i class="fas fa-trash"></i></button>
+							</td>
+						</tr>
+						<tr>
+							<td>5</td> <!--#-->
+							<td>The Last of Us Part II</td> <!--Nombre-->
+							<td>18/06/2020</td> <!--Lanzamiento-->
+							<td>Naughty Dog</td> <!--Desarrollador--> 
+							<td>Sony Interactive Entertainment</td> <!--Editor-->
+							<td>Acción-aventura</td> <!--Género-->
+							<td>No</td> <!--Multijugador-->
+							<td>Mature +17</td> <!--ESRB-->
+							<td>199</td> <!--Cantidad-->
+							<td>150000</td> <!--Precio-->
+							<td>PlayStation 5</td> <!--Consola-->
+							<td>Sí</td> <!--Habilitado-->
+							<td>
+								<button type="button" class="btn btn-info" data-toggle="modal" data-target="#ver1"> <i class="fas fa-eye"></i> </button>
+		
+								<!-- The Modal -->
+								<div class="modal fade" id="ver1">
+									<div class="modal-dialog modal-dialog-scrollable">
+										<div class="modal-content">
+		
+											<!-- Modal Header -->
+											<div class="modal-header">
+												<h4 class="modal-title">Detalles</h4>
+												<button type="button" class="close" data-dismiss="modal">&times;</button>
+											</div>
+		
+											<!-- Modal body -->
+											<div class="modal-body">
+												<table class="table table-striped">
+													<thead>
+														<th>Ver</th>
+													</thead>
+													<tr>
+														<td><label for="">#</label></td>
+														<td><input type="number" value="1" disabled> </td>
+													</tr>
+													<tr>
+														<td><label for="">Nombre</label></td>
+														<td><input type="text" value="Halo Infinite" disabled> </td>
+													</tr>
+													<tr>
+														<td> <label for="">Lanzamiento</label></td>
+														<td><input type="date" value="15/11/2021" disabled></td>
+													</tr>
+													<tr>
+														<td> <label for="">Desarrollador</label></td>
+														<td><input type="text" value="343 Industries" disabled></td>
+													</tr>
+													<tr>
+														<td><label for="">Editor</label></td>
+														<td><input type="text" value="Xbox Game Studios" disabled> </td>
+													</tr>
+													<tr>
+														<td><label for="">Género</label></td>
+														<td><input type="text" value="FPS" disabled> </td>
+													</tr>
+													<tr>
+														<td> <label for="">Multijugador</label></td>
+														<td><input type="text" value="No" disabled></td>
+													</tr>
+													<tr>
+														<td> <label for="">ESRB</label></td>
+														<td><input type="text" value="Teen" disabled></td>
+													</tr>
+													<tr>
+														<td> <label for="">Cantidad</label></td>
+														<td><input type="number" value="199" disabled></td>
+													</tr>
+													<tr>
+														<td> <label for="">Precio</label></td>
+														<td><input type="number" value="214900" disabled></td>
+													</tr>
+													<tr>
+														<td> <label for="">Consola</label></td>
+														<td><input type="text" value="Xbox Series X/S" disabled></td>
+													</tr>
+													<tr>
+														<td> <label for="">Habilitado</label></td>
+														<td><input type="text" value="Sí" disabled></td>
+													</tr>
+												</table>
+											</div>
+		
+											<!-- Modal footer -->
+											<div class="modal-footer">
+												<button type="button" class="btn btn-danger" data-dismiss="modal">Cerrar</button>
+											</div>
+										</div>
+									</div>
+								</div>
+								
+								<button type="button" class="btn btn-success" data-toggle="modal" data-target="#modalMod"><i class="fas fa-edit"></i></button>
+								
+								<!-- The Modal -->
+								<div class="modal fade" id="modalMod">
+									<div class="modal-dialog modal-dialog-scrollable">
+										<div class="modal-content">
+		
+											<!-- Modal Header -->
+											<div class="modal-header">
+												<h4 class="modal-title">Editar</h4>
+												<button type="button" class="close" data-dismiss="modal">&times;</button>
+											</div>
+											<!-- Modal body -->
+											<div class="modal-body">
+												<table class="table table-striped">
+													<thead>
+														<th>Editar</th>
+													</thead>
+													<tr>
+														<td><label for="">#</label></td>
+														<td><input type="number" value="1"> </td>
+													</tr>
+													<tr>
+														<td><label for="">Nombre</label></td>
+														<td><input type="text" value="Halo Infinite"> </td>
+													</tr>
+													<tr>
+														<td> <label for="">Lanzamiento</label></td>
+														<td><input type="date" value="15/11/2021"></td>
+													</tr>
+													<tr>
+														<td> <label for="">Desarrollador</label></td>
+														<td><input type="text" value="343 Industries"></td>
+													</tr>
+													<tr>
+														<td><label for="">Editor</label></td>
+														<td><input type="text" value="Xbox Game Studios"> </td>
+													</tr>
+													<tr>
+														<td><label for="">Género</label></td>
+														<td><input type="text" value="FPS"> </td>
+													</tr>
+													<tr>
+														<td> <label for="">Multijugador</label></td>
+														<td><input type="text" value="No"></td>
+													</tr>
+													<tr>
+														<td> <label for="">ESRB</label></td>
+														<td><input type="text" value="Teen"></td>
+													</tr>
+													<tr>
+														<td> <label for="">Cantidad</label></td>
+														<td><input type="number" value="199"></td>
+													</tr>
+													<tr>
+														<td> <label for="">Precio</label></td>
+														<td><input type="number" value="214900"></td>
+													</tr>
+													<tr>
+														<td> <label for="">Consola</label></td>
+														<td><input type="text" value="Xbox Series X/S"></td>
+													</tr>
+													<tr>
+														<td> <label for="">Habilitado</label></td>
+														<td><input type="text" value="Sí"></td>
+													</tr>
+												</table>
+											</div>
+											<!-- Modal footer -->
+											<div class="modal-footer">
+												<button type="button" class="btn btn-success" data-dismiss="modal">Guardar</button>
+												<button type="button" class="btn btn-danger" data-dismiss="modal">Cerrar</button>
+											</div>
+										</div>
+									</div>
+								</div>
+								<button type="button" class="btn btn-danger"><i class="fas fa-trash"></i></button>
+							</td>
+						</tr>
+						<tr>
+							<td>6</td> <!--#-->
+							<td>Super Smash Bros. Ultimate</td> <!--Nombre-->
+							<td>07/12/2018</td> <!--Lanzamiento-->
+							<td>Bandai Namco Entertainment</td> <!--Desarrollador--> 
+							<td>Nintendo</td> <!--Editor-->
+							<td>Lucha</td> <!--Género-->
+							<td>Sí</td> <!--Multijugador-->
+							<td>Everyone +10</td> <!--ESRB-->
+							<td>25</td> <!--Cantidad-->
+							<td>229000</td> <!--Precio-->
+							<td>Nintendo Switch</td> <!--Consola-->
+							<td>Sí</td> <!--Habilitado-->
+							<td>
+								<button type="button" class="btn btn-info" data-toggle="modal" data-target="#ver1"> <i class="fas fa-eye"></i> </button>
+		
+								<!-- The Modal -->
+								<div class="modal fade" id="ver1">
+									<div class="modal-dialog modal-dialog-scrollable">
+										<div class="modal-content">
+		
+											<!-- Modal Header -->
+											<div class="modal-header">
+												<h4 class="modal-title">Detalles</h4>
+												<button type="button" class="close" data-dismiss="modal">&times;</button>
+											</div>
+		
+											<!-- Modal body -->
+											<div class="modal-body">
+												<table class="table table-striped">
+													<thead>
+														<th>Ver</th>
+													</thead>
+													<tr>
+														<td><label for="">#</label></td>
+														<td><input type="number" value="1" disabled> </td>
+													</tr>
+													<tr>
+														<td><label for="">Nombre</label></td>
+														<td><input type="text" value="Halo Infinite" disabled> </td>
+													</tr>
+													<tr>
+														<td> <label for="">Lanzamiento</label></td>
+														<td><input type="date" value="15/11/2021" disabled></td>
+													</tr>
+													<tr>
+														<td> <label for="">Desarrollador</label></td>
+														<td><input type="text" value="343 Industries" disabled></td>
+													</tr>
+													<tr>
+														<td><label for="">Editor</label></td>
+														<td><input type="text" value="Xbox Game Studios" disabled> </td>
+													</tr>
+													<tr>
+														<td><label for="">Género</label></td>
+														<td><input type="text" value="FPS" disabled> </td>
+													</tr>
+													<tr>
+														<td> <label for="">Multijugador</label></td>
+														<td><input type="text" value="No" disabled></td>
+													</tr>
+													<tr>
+														<td> <label for="">ESRB</label></td>
+														<td><input type="text" value="Teen" disabled></td>
+													</tr>
+													<tr>
+														<td> <label for="">Cantidad</label></td>
+														<td><input type="number" value="199" disabled></td>
+													</tr>
+													<tr>
+														<td> <label for="">Precio</label></td>
+														<td><input type="number" value="214900" disabled></td>
+													</tr>
+													<tr>
+														<td> <label for="">Consola</label></td>
+														<td><input type="text" value="Xbox Series X/S" disabled></td>
+													</tr>
+													<tr>
+														<td> <label for="">Habilitado</label></td>
+														<td><input type="text" value="Sí" disabled></td>
+													</tr>
+												</table>
+											</div>
+		
+											<!-- Modal footer -->
+											<div class="modal-footer">
+												<button type="button" class="btn btn-danger" data-dismiss="modal">Cerrar</button>
+											</div>
+										</div>
+									</div>
+								</div>
+								
+								<button type="button" class="btn btn-success" data-toggle="modal" data-target="#modalMod"><i class="fas fa-edit"></i></button>
+								
+								<!-- The Modal -->
+								<div class="modal fade" id="modalMod">
+									<div class="modal-dialog modal-dialog-scrollable">
+										<div class="modal-content">
+		
+											<!-- Modal Header -->
+											<div class="modal-header">
+												<h4 class="modal-title">Editar</h4>
+												<button type="button" class="close" data-dismiss="modal">&times;</button>
+											</div>
+											<!-- Modal body -->
+											<div class="modal-body">
+												<table class="table table-striped">
+													<thead>
+														<th>Editar</th>
+													</thead>
+													<tr>
+														<td><label for="">#</label></td>
+														<td><input type="number" value="1"> </td>
+													</tr>
+													<tr>
+														<td><label for="">Nombre</label></td>
+														<td><input type="text" value="Halo Infinite"> </td>
+													</tr>
+													<tr>
+														<td> <label for="">Lanzamiento</label></td>
+														<td><input type="date" value="15/11/2021"></td>
+													</tr>
+													<tr>
+														<td> <label for="">Desarrollador</label></td>
+														<td><input type="text" value="343 Industries"></td>
+													</tr>
+													<tr>
+														<td><label for="">Editor</label></td>
+														<td><input type="text" value="Xbox Game Studios"> </td>
+													</tr>
+													<tr>
+														<td><label for="">Género</label></td>
+														<td><input type="text" value="FPS"> </td>
+													</tr>
+													<tr>
+														<td> <label for="">Multijugador</label></td>
+														<td><input type="text" value="No"></td>
+													</tr>
+													<tr>
+														<td> <label for="">ESRB</label></td>
+														<td><input type="text" value="Teen"></td>
+													</tr>
+													<tr>
+														<td> <label for="">Cantidad</label></td>
+														<td><input type="number" value="199"></td>
+													</tr>
+													<tr>
+														<td> <label for="">Precio</label></td>
+														<td><input type="number" value="214900"></td>
+													</tr>
+													<tr>
+														<td> <label for="">Consola</label></td>
+														<td><input type="text" value="Xbox Series X/S"></td>
+													</tr>
+													<tr>
+														<td> <label for="">Habilitado</label></td>
+														<td><input type="text" value="Sí"></td>
+													</tr>
+												</table>
+											</div>
+											<!-- Modal footer -->
+											<div class="modal-footer">
+												<button type="button" class="btn btn-success" data-dismiss="modal">Guardar</button>
+												<button type="button" class="btn btn-danger" data-dismiss="modal">Cerrar</button>
+											</div>
+										</div>
+									</div>
+								</div>
+								<button type="button" class="btn btn-danger"><i class="fas fa-trash"></i></button>
+							</td>
+						</tr>
+						<tr>
+							<td>7</td> <!--#-->
+							<td>Starfield</td> <!--Nombre-->
+							<td>11/11/2022</td> <!--Lanzamiento-->
+							<td>Bethesda Game Studios</td> <!--Desarrollador--> 
+							<td>Bethesda Softworks</td> <!--Editor-->
+							<td>Rol</td> <!--Género-->
+							<td>No</td> <!--Multijugador-->
+							<td>Rating Pending</td> <!--ESRB-->
+							<td>0</td> <!--Cantidad-->
+							<td></td> <!--Precio-->
+							<td>Xbox Series X/S</td> <!--Consola-->
+							<td>No</td> <!--Habilitado-->
+							<td>
+								<button type="button" class="btn btn-info" data-toggle="modal" data-target="#ver1"> <i class="fas fa-eye"></i> </button>
+		
+								<!-- The Modal -->
+								<div class="modal fade" id="ver1">
+									<div class="modal-dialog modal-dialog-scrollable">
+										<div class="modal-content">
+		
+											<!-- Modal Header -->
+											<div class="modal-header">
+												<h4 class="modal-title">Detalles</h4>
+												<button type="button" class="close" data-dismiss="modal">&times;</button>
+											</div>
+		
+											<!-- Modal body -->
+											<div class="modal-body">
+												<table class="table table-striped">
+													<thead>
+														<th>Ver</th>
+													</thead>
+													<tr>
+														<td><label for="">#</label></td>
+														<td><input type="number" value="1" disabled> </td>
+													</tr>
+													<tr>
+														<td><label for="">Nombre</label></td>
+														<td><input type="text" value="Halo Infinite" disabled> </td>
+													</tr>
+													<tr>
+														<td> <label for="">Lanzamiento</label></td>
+														<td><input type="date" value="15/11/2021" disabled></td>
+													</tr>
+													<tr>
+														<td> <label for="">Desarrollador</label></td>
+														<td><input type="text" value="343 Industries" disabled></td>
+													</tr>
+													<tr>
+														<td><label for="">Editor</label></td>
+														<td><input type="text" value="Xbox Game Studios" disabled> </td>
+													</tr>
+													<tr>
+														<td><label for="">Género</label></td>
+														<td><input type="text" value="FPS" disabled> </td>
+													</tr>
+													<tr>
+														<td> <label for="">Multijugador</label></td>
+														<td><input type="text" value="No" disabled></td>
+													</tr>
+													<tr>
+														<td> <label for="">ESRB</label></td>
+														<td><input type="text" value="Teen" disabled></td>
+													</tr>
+													<tr>
+														<td> <label for="">Cantidad</label></td>
+														<td><input type="number" value="199" disabled></td>
+													</tr>
+													<tr>
+														<td> <label for="">Precio</label></td>
+														<td><input type="number" value="214900" disabled></td>
+													</tr>
+													<tr>
+														<td> <label for="">Consola</label></td>
+														<td><input type="text" value="Xbox Series X/S" disabled></td>
+													</tr>
+													<tr>
+														<td> <label for="">Habilitado</label></td>
+														<td><input type="text" value="Sí" disabled></td>
+													</tr>
+												</table>
+											</div>
+		
+											<!-- Modal footer -->
+											<div class="modal-footer">
+												<button type="button" class="btn btn-danger" data-dismiss="modal">Cerrar</button>
+											</div>
+										</div>
+									</div>
+								</div>
+								
+								<button type="button" class="btn btn-success" data-toggle="modal" data-target="#modalMod"><i class="fas fa-edit"></i></button>
+								
+								<!-- The Modal -->
+								<div class="modal fade" id="modalMod">
+									<div class="modal-dialog modal-dialog-scrollable">
+										<div class="modal-content">
+		
+											<!-- Modal Header -->
+											<div class="modal-header">
+												<h4 class="modal-title">Editar</h4>
+												<button type="button" class="close" data-dismiss="modal">&times;</button>
+											</div>
+											<!-- Modal body -->
+											<div class="modal-body">
+												<table class="table table-striped">
+													<thead>
+														<th>Editar</th>
+													</thead>
+													<tr>
+														<td><label for="">#</label></td>
+														<td><input type="number" value="1"> </td>
+													</tr>
+													<tr>
+														<td><label for="">Nombre</label></td>
+														<td><input type="text" value="Halo Infinite"> </td>
+													</tr>
+													<tr>
+														<td> <label for="">Lanzamiento</label></td>
+														<td><input type="date" value="15/11/2021"></td>
+													</tr>
+													<tr>
+														<td> <label for="">Desarrollador</label></td>
+														<td><input type="text" value="343 Industries"></td>
+													</tr>
+													<tr>
+														<td><label for="">Editor</label></td>
+														<td><input type="text" value="Xbox Game Studios"> </td>
+													</tr>
+													<tr>
+														<td><label for="">Género</label></td>
+														<td><input type="text" value="FPS"> </td>
+													</tr>
+													<tr>
+														<td> <label for="">Multijugador</label></td>
+														<td><input type="text" value="No"></td>
+													</tr>
+													<tr>
+														<td> <label for="">ESRB</label></td>
+														<td><input type="text" value="Teen"></td>
+													</tr>
+													<tr>
+														<td> <label for="">Cantidad</label></td>
+														<td><input type="number" value="199"></td>
+													</tr>
+													<tr>
+														<td> <label for="">Precio</label></td>
+														<td><input type="number" value="214900"></td>
+													</tr>
+													<tr>
+														<td> <label for="">Consola</label></td>
+														<td><input type="text" value="Xbox Series X/S"></td>
+													</tr>
+													<tr>
+														<td> <label for="">Habilitado</label></td>
+														<td><input type="text" value="Sí"></td>
+													</tr>
+												</table>
+											</div>
+											<!-- Modal footer -->
+											<div class="modal-footer">
+												<button type="button" class="btn btn-success" data-dismiss="modal">Guardar</button>
+												<button type="button" class="btn btn-danger" data-dismiss="modal">Cerrar</button>
+											</div>
+										</div>
+									</div>
+								</div>
+								<button type="button" class="btn btn-danger"><i class="fas fa-trash"></i></button>
+							</td>
+						</tr>
+						<tr>
+							<td>8</td> <!--#-->
+							<td>No Man's Sky</td> <!--Nombre-->
+							<td>09/08/2016</td> <!--Lanzamiento-->
+							<td>Hello Games</td> <!--Desarrollador--> 
+							<td>Hello Games</td> <!--Editor-->
+							<td>Mundo abierto</td> <!--Género-->
+							<td>Sí</td> <!--Multijugador-->
+							<td>Teen</td> <!--ESRB-->
+							<td>25</td> <!--Cantidad-->
+							<td>109000</td> <!--Precio-->
+							<td>PlayStation 4</td> <!--Consola-->
+							<td>Sí</td> <!--Habilitado-->
+							<td>
+								<button type="button" class="btn btn-info" data-toggle="modal" data-target="#ver1"> <i class="fas fa-eye"></i> </button>
+		
+								<!-- The Modal -->
+								<div class="modal fade" id="ver1">
+									<div class="modal-dialog modal-dialog-scrollable">
+										<div class="modal-content">
+		
+											<!-- Modal Header -->
+											<div class="modal-header">
+												<h4 class="modal-title">Detalles</h4>
+												<button type="button" class="close" data-dismiss="modal">&times;</button>
+											</div>
+		
+											<!-- Modal body -->
+											<div class="modal-body">
+												<table class="table table-striped">
+													<thead>
+														<th>Ver</th>
+													</thead>
+													<tr>
+														<td><label for="">#</label></td>
+														<td><input type="number" value="1" disabled> </td>
+													</tr>
+													<tr>
+														<td><label for="">Nombre</label></td>
+														<td><input type="text" value="Halo Infinite" disabled> </td>
+													</tr>
+													<tr>
+														<td> <label for="">Lanzamiento</label></td>
+														<td><input type="date" value="15/11/2021" disabled></td>
+													</tr>
+													<tr>
+														<td> <label for="">Desarrollador</label></td>
+														<td><input type="text" value="343 Industries" disabled></td>
+													</tr>
+													<tr>
+														<td><label for="">Editor</label></td>
+														<td><input type="text" value="Xbox Game Studios" disabled> </td>
+													</tr>
+													<tr>
+														<td><label for="">Género</label></td>
+														<td><input type="text" value="FPS" disabled> </td>
+													</tr>
+													<tr>
+														<td> <label for="">Multijugador</label></td>
+														<td><input type="text" value="No" disabled></td>
+													</tr>
+													<tr>
+														<td> <label for="">ESRB</label></td>
+														<td><input type="text" value="Teen" disabled></td>
+													</tr>
+													<tr>
+														<td> <label for="">Cantidad</label></td>
+														<td><input type="number" value="199" disabled></td>
+													</tr>
+													<tr>
+														<td> <label for="">Precio</label></td>
+														<td><input type="number" value="214900" disabled></td>
+													</tr>
+													<tr>
+														<td> <label for="">Consola</label></td>
+														<td><input type="text" value="Xbox Series X/S" disabled></td>
+													</tr>
+													<tr>
+														<td> <label for="">Habilitado</label></td>
+														<td><input type="text" value="Sí" disabled></td>
+													</tr>
+												</table>
+											</div>
+		
+											<!-- Modal footer -->
+											<div class="modal-footer">
+												<button type="button" class="btn btn-danger" data-dismiss="modal">Cerrar</button>
+											</div>
+										</div>
+									</div>
+								</div>
+								
+								<button type="button" class="btn btn-success" data-toggle="modal" data-target="#modalMod"><i class="fas fa-edit"></i></button>
+								
+								<!-- The Modal -->
+								<div class="modal fade" id="modalMod">
+									<div class="modal-dialog modal-dialog-scrollable">
+										<div class="modal-content">
+		
+											<!-- Modal Header -->
+											<div class="modal-header">
+												<h4 class="modal-title">Editar</h4>
+												<button type="button" class="close" data-dismiss="modal">&times;</button>
+											</div>
+											<!-- Modal body -->
+											<div class="modal-body">
+												<table class="table table-striped">
+													<thead>
+														<th>Editar</th>
+													</thead>
+													<tr>
+														<td><label for="">#</label></td>
+														<td><input type="number" value="1"> </td>
+													</tr>
+													<tr>
+														<td><label for="">Nombre</label></td>
+														<td><input type="text" value="Halo Infinite"> </td>
+													</tr>
+													<tr>
+														<td> <label for="">Lanzamiento</label></td>
+														<td><input type="date" value="15/11/2021"></td>
+													</tr>
+													<tr>
+														<td> <label for="">Desarrollador</label></td>
+														<td><input type="text" value="343 Industries"></td>
+													</tr>
+													<tr>
+														<td><label for="">Editor</label></td>
+														<td><input type="text" value="Xbox Game Studios"> </td>
+													</tr>
+													<tr>
+														<td><label for="">Género</label></td>
+														<td><input type="text" value="FPS"> </td>
+													</tr>
+													<tr>
+														<td> <label for="">Multijugador</label></td>
+														<td><input type="text" value="No"></td>
+													</tr>
+													<tr>
+														<td> <label for="">ESRB</label></td>
+														<td><input type="text" value="Teen"></td>
+													</tr>
+													<tr>
+														<td> <label for="">Cantidad</label></td>
+														<td><input type="number" value="199"></td>
+													</tr>
+													<tr>
+														<td> <label for="">Precio</label></td>
+														<td><input type="number" value="214900"></td>
+													</tr>
+													<tr>
+														<td> <label for="">Consola</label></td>
+														<td><input type="text" value="Xbox Series X/S"></td>
+													</tr>
+													<tr>
+														<td> <label for="">Habilitado</label></td>
+														<td><input type="text" value="Sí"></td>
+													</tr>
+												</table>
+											</div>
+											<!-- Modal footer -->
+											<div class="modal-footer">
+												<button type="button" class="btn btn-success" data-dismiss="modal">Guardar</button>
+												<button type="button" class="btn btn-danger" data-dismiss="modal">Cerrar</button>
+											</div>
+										</div>
+									</div>
+								</div>
+								<button type="button" class="btn btn-danger"><i class="fas fa-trash"></i></button>
+							</td>
+						</tr>
+						<tr>
+							<td>9</td> <!--#-->
+							<td>God of War</td> <!--Nombre-->
+							<td>20/04/2018</td> <!--Lanzamiento-->
+							<td>SCE Santa Monica Studio</td> <!--Desarrollador--> 
+							<td>Sony Interactive Entertainment</td> <!--Editor-->
+							<td>Acción-aventura</td> <!--Género-->
+							<td>No</td> <!--Multijugador-->
+							<td>Mature +17</td> <!--ESRB-->
+							<td>99</td> <!--Cantidad-->
+							<td>159000</td> <!--Precio-->
+							<td>PlayStation 4</td> <!--Consola-->
+							<td>Sí</td> <!--Habilitado-->
+							<td>
+								<button type="button" class="btn btn-info" data-toggle="modal" data-target="#ver1"> <i class="fas fa-eye"></i> </button>
+		
+								<!-- The Modal -->
+								<div class="modal fade" id="ver1">
+									<div class="modal-dialog modal-dialog-scrollable">
+										<div class="modal-content">
+		
+											<!-- Modal Header -->
+											<div class="modal-header">
+												<h4 class="modal-title">Detalles</h4>
+												<button type="button" class="close" data-dismiss="modal">&times;</button>
+											</div>
+		
+											<!-- Modal body -->
+											<div class="modal-body">
+												<table class="table table-striped">
+													<thead>
+														<th>Ver</th>
+													</thead>
+													<tr>
+														<td><label for="">#</label></td>
+														<td><input type="number" value="1" disabled> </td>
+													</tr>
+													<tr>
+														<td><label for="">Nombre</label></td>
+														<td><input type="text" value="Halo Infinite" disabled> </td>
+													</tr>
+													<tr>
+														<td> <label for="">Lanzamiento</label></td>
+														<td><input type="date" value="15/11/2021" disabled></td>
+													</tr>
+													<tr>
+														<td> <label for="">Desarrollador</label></td>
+														<td><input type="text" value="343 Industries" disabled></td>
+													</tr>
+													<tr>
+														<td><label for="">Editor</label></td>
+														<td><input type="text" value="Xbox Game Studios" disabled> </td>
+													</tr>
+													<tr>
+														<td><label for="">Género</label></td>
+														<td><input type="text" value="FPS" disabled> </td>
+													</tr>
+													<tr>
+														<td> <label for="">Multijugador</label></td>
+														<td><input type="text" value="No" disabled></td>
+													</tr>
+													<tr>
+														<td> <label for="">ESRB</label></td>
+														<td><input type="text" value="Teen" disabled></td>
+													</tr>
+													<tr>
+														<td> <label for="">Cantidad</label></td>
+														<td><input type="number" value="199" disabled></td>
+													</tr>
+													<tr>
+														<td> <label for="">Precio</label></td>
+														<td><input type="number" value="214900" disabled></td>
+													</tr>
+													<tr>
+														<td> <label for="">Consola</label></td>
+														<td><input type="text" value="Xbox Series X/S" disabled></td>
+													</tr>
+													<tr>
+														<td> <label for="">Habilitado</label></td>
+														<td><input type="text" value="Sí" disabled></td>
+													</tr>
+												</table>
+											</div>
+		
+											<!-- Modal footer -->
+											<div class="modal-footer">
+												<button type="button" class="btn btn-danger" data-dismiss="modal">Cerrar</button>
+											</div>
+										</div>
+									</div>
+								</div>
+								
+								<button type="button" class="btn btn-success" data-toggle="modal" data-target="#modalMod"><i class="fas fa-edit"></i></button>
+								
+								<!-- The Modal -->
+								<div class="modal fade" id="modalMod">
+									<div class="modal-dialog modal-dialog-scrollable">
+										<div class="modal-content">
+		
+											<!-- Modal Header -->
+											<div class="modal-header">
+												<h4 class="modal-title">Editar</h4>
+												<button type="button" class="close" data-dismiss="modal">&times;</button>
+											</div>
+											<!-- Modal body -->
+											<div class="modal-body">
+												<table class="table table-striped">
+													<thead>
+														<th>Editar</th>
+													</thead>
+													<tr>
+														<td><label for="">#</label></td>
+														<td><input type="number" value="1"> </td>
+													</tr>
+													<tr>
+														<td><label for="">Nombre</label></td>
+														<td><input type="text" value="Halo Infinite"> </td>
+													</tr>
+													<tr>
+														<td> <label for="">Lanzamiento</label></td>
+														<td><input type="date" value="15/11/2021"></td>
+													</tr>
+													<tr>
+														<td> <label for="">Desarrollador</label></td>
+														<td><input type="text" value="343 Industries"></td>
+													</tr>
+													<tr>
+														<td><label for="">Editor</label></td>
+														<td><input type="text" value="Xbox Game Studios"> </td>
+													</tr>
+													<tr>
+														<td><label for="">Género</label></td>
+														<td><input type="text" value="FPS"> </td>
+													</tr>
+													<tr>
+														<td> <label for="">Multijugador</label></td>
+														<td><input type="text" value="No"></td>
+													</tr>
+													<tr>
+														<td> <label for="">ESRB</label></td>
+														<td><input type="text" value="Teen"></td>
+													</tr>
+													<tr>
+														<td> <label for="">Cantidad</label></td>
+														<td><input type="number" value="199"></td>
+													</tr>
+													<tr>
+														<td> <label for="">Precio</label></td>
+														<td><input type="number" value="214900"></td>
+													</tr>
+													<tr>
+														<td> <label for="">Consola</label></td>
+														<td><input type="text" value="Xbox Series X/S"></td>
+													</tr>
+													<tr>
+														<td> <label for="">Habilitado</label></td>
+														<td><input type="text" value="Sí"></td>
+													</tr>
+												</table>
+											</div>
+											<!-- Modal footer -->
+											<div class="modal-footer">
+												<button type="button" class="btn btn-success" data-dismiss="modal">Guardar</button>
+												<button type="button" class="btn btn-danger" data-dismiss="modal">Cerrar</button>
+											</div>
+										</div>
+									</div>
+								</div>
+								<button type="button" class="btn btn-danger"><i class="fas fa-trash"></i></button>
+							</td>
+						</tr>
+						<tr>
+							<td>10</td> <!--#-->
+							<td>Microsoft Flight Simulator</td> <!--Nombre-->
+							<td>27/07/2021</td> <!--Lanzamiento-->
+							<td>Asobo Studios</td> <!--Desarrollador--> 
+							<td>Xbox Game Studios</td> <!--Editor-->
+							<td>Simulador</td> <!--Género-->
+							<td>No</td> <!--Multijugador-->
+							<td>Everyone</td> <!--ESRB-->
+							<td>33</td> <!--Cantidad-->
+							<td>249999</td> <!--Precio-->
+							<td>Xbox Series X/S</td> <!--Consola-->
+							<td>Sí</td> <!--Habilitado-->
+							<td>
+								<button type="button" class="btn btn-info" data-toggle="modal" data-target="#ver1"> <i class="fas fa-eye"></i> </button>
+		
+								<!-- The Modal -->
+								<div class="modal fade" id="ver1">
+									<div class="modal-dialog modal-dialog-scrollable">
+										<div class="modal-content">
+		
+											<!-- Modal Header -->
+											<div class="modal-header">
+												<h4 class="modal-title">Detalles</h4>
+												<button type="button" class="close" data-dismiss="modal">&times;</button>
+											</div>
+		
+											<!-- Modal body -->
+											<div class="modal-body">
+												<table class="table table-striped">
+													<thead>
+														<th>Ver</th>
+													</thead>
+													<tr>
+														<td><label for="">#</label></td>
+														<td><input type="number" value="1" disabled> </td>
+													</tr>
+													<tr>
+														<td><label for="">Nombre</label></td>
+														<td><input type="text" value="Halo Infinite" disabled> </td>
+													</tr>
+													<tr>
+														<td> <label for="">Lanzamiento</label></td>
+														<td><input type="date" value="15/11/2021" disabled></td>
+													</tr>
+													<tr>
+														<td> <label for="">Desarrollador</label></td>
+														<td><input type="text" value="343 Industries" disabled></td>
+													</tr>
+													<tr>
+														<td><label for="">Editor</label></td>
+														<td><input type="text" value="Xbox Game Studios" disabled> </td>
+													</tr>
+													<tr>
+														<td><label for="">Género</label></td>
+														<td><input type="text" value="FPS" disabled> </td>
+													</tr>
+													<tr>
+														<td> <label for="">Multijugador</label></td>
+														<td><input type="text" value="No" disabled></td>
+													</tr>
+													<tr>
+														<td> <label for="">ESRB</label></td>
+														<td><input type="text" value="Teen" disabled></td>
+													</tr>
+													<tr>
+														<td> <label for="">Cantidad</label></td>
+														<td><input type="number" value="199" disabled></td>
+													</tr>
+													<tr>
+														<td> <label for="">Precio</label></td>
+														<td><input type="number" value="214900" disabled></td>
+													</tr>
+													<tr>
+														<td> <label for="">Consola</label></td>
+														<td><input type="text" value="Xbox Series X/S" disabled></td>
+													</tr>
+													<tr>
+														<td> <label for="">Habilitado</label></td>
+														<td><input type="text" value="Sí" disabled></td>
+													</tr>
+												</table>
+											</div>
+		
+											<!-- Modal footer -->
+											<div class="modal-footer">
+												<button type="button" class="btn btn-danger" data-dismiss="modal">Cerrar</button>
+											</div>
+										</div>
+									</div>
+								</div>
+								
+								<button type="button" class="btn btn-success" data-toggle="modal" data-target="#modalMod"><i class="fas fa-edit"></i></button>
+								
+								<!-- The Modal -->
+								<div class="modal fade" id="modalMod">
+									<div class="modal-dialog modal-dialog-scrollable">
+										<div class="modal-content">
+		
+											<!-- Modal Header -->
+											<div class="modal-header">
+												<h4 class="modal-title">Editar</h4>
+												<button type="button" class="close" data-dismiss="modal">&times;</button>
+											</div>
+											<!-- Modal body -->
+											<div class="modal-body">
+												<table class="table table-striped">
+													<thead>
+														<th>Editar</th>
+													</thead>
+													<tr>
+														<td><label for="">#</label></td>
+														<td><input type="number" value="1"> </td>
+													</tr>
+													<tr>
+														<td><label for="">Nombre</label></td>
+														<td><input type="text" value="Halo Infinite"> </td>
+													</tr>
+													<tr>
+														<td> <label for="">Lanzamiento</label></td>
+														<td><input type="date" value="15/11/2021"></td>
+													</tr>
+													<tr>
+														<td> <label for="">Desarrollador</label></td>
+														<td><input type="text" value="343 Industries"></td>
+													</tr>
+													<tr>
+														<td><label for="">Editor</label></td>
+														<td><input type="text" value="Xbox Game Studios"> </td>
+													</tr>
+													<tr>
+														<td><label for="">Género</label></td>
+														<td><input type="text" value="FPS"> </td>
+													</tr>
+													<tr>
+														<td> <label for="">Multijugador</label></td>
+														<td><input type="text" value="No"></td>
+													</tr>
+													<tr>
+														<td> <label for="">ESRB</label></td>
+														<td><input type="text" value="Teen"></td>
+													</tr>
+													<tr>
+														<td> <label for="">Cantidad</label></td>
+														<td><input type="number" value="199"></td>
+													</tr>
+													<tr>
+														<td> <label for="">Precio</label></td>
+														<td><input type="number" value="214900"></td>
+													</tr>
+													<tr>
+														<td> <label for="">Consola</label></td>
+														<td><input type="text" value="Xbox Series X/S"></td>
+													</tr>
+													<tr>
+														<td> <label for="">Habilitado</label></td>
+														<td><input type="text" value="Sí"></td>
+													</tr>
+												</table>
+											</div>
+											<!-- Modal footer -->
+											<div class="modal-footer">
+												<button type="button" class="btn btn-success" data-dismiss="modal">Guardar</button>
+												<button type="button" class="btn btn-danger" data-dismiss="modal">Cerrar</button>
+											</div>
+										</div>
+									</div>
+								</div>
+								<button type="button" class="btn btn-danger"><i class="fas fa-trash"></i></button>
+							</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+		</div>
+	</div>
+	<!-- Cuerpo - Final -->
+
+	<!-- Footer - Inicio -->
+	<div class="footer-area">
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-3 col-md-6">
+					<div class="footer-box about-widget">
+						<h2 class="widget-title">Acerca de nosotros</h2>
+						<p>Somos una nueva compañía conformada por la gente más capacitada para traer los mejores juegos de consolas a nuestros clientes.</p>
+					</div>
+				</div>
+				<div class="col-lg-3 col-md-6">
+					<div class="footer-box get-in-touch">
+						<h2 class="widget-title">Ponte en contacto</h2>
+						<ul>
+							<li>Complejo Ruta N Calle 67 52-20 Piso 2 Torre A, Medellín, Antioquia</li>
+							<li>soporte@instantgamers.com</li>
+							<li>+57 313 679 3126</li>
+						</ul>
+					</div>
+				</div>
+				<div class="col-lg-3 col-md-6">
+					<div class="footer-box pages">
+						<h2 class="widget-title">Páginas</h2>
+						<ul>
+							<li><a href="index.html">Inicio</a></li>
+							
+							<li><a href="services.html">Juegos</a></li>
+							<li><a href="news.html">Usuarios</a></li>
+							<li><a href="contact.html">Ingresos/Egresos</a></li>
+							<li><a href="contact.html">Proveedores</a></li>
+						</ul>
+					</div>
+				</div>
+				<div class="col-lg-3 col-md-6">
+					<div class="footer-box subscribe">
+						<h2 class="widget-title">Suscríbete</h2>
+						<p>Suscríbete para estar al tanto de las novedades en la tienda</p>
+						<form action="index.html">
+							<input type="email" placeholder="Email">
+							<button type="submit"><i class="fas fa-paper-plane"></i></button>
+						</form>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- Footer - Final -->
+	
+	<!-- copyright -->
+	<!--
+	<div class="copyright">
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-6 col-md-12">
+					<p>Copyrights &copy; 2019 - <a href="https://imransdesign.com/">Imran Hossain</a>,  All Rights Reserved.<br>
+						Distributed By - <a href="https://themewagon.com/">Themewagon</a>
+					</p>
+				</div>
+				<div class="col-lg-6 text-right col-md-12">
+					<div class="social-icons">
+						<ul>
+							<li><a href="#" target="_blank"><i class="fab fa-facebook-f"></i></a></li>
+							<li><a href="#" target="_blank"><i class="fab fa-twitter"></i></a></li>
+							<li><a href="#" target="_blank"><i class="fab fa-instagram"></i></a></li>
+							<li><a href="#" target="_blank"><i class="fab fa-linkedin"></i></a></li>
+							<li><a href="#" target="_blank"><i class="fab fa-dribbble"></i></a></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	-->
+	<!-- end copyright -->
+	
+	<!-- jquery -->
+    <script src="assets/js/jquery-1.11.3.min.js"></script>
+    <!-- bootstrap -->
+    <script src="assets/bootstrap/js/bootstrap.min.js"></script>
+    <!-- count down -->
+    <script src="assets/js/jquery.countdown.js"></script>
+    <!-- isotope -->
+    <script src="assets/js/jquery.isotope-3.0.6.min.js"></script>
+    <!-- waypoints -->
+    <script src="assets/js/waypoints.js"></script>
+    <!-- owl carousel -->
+    <script src="assets/js/owl.carousel.min.js"></script>
+    <!-- magnific popup -->
+    <script src="assets/js/jquery.magnific-popup.min.js"></script>
+    <!-- mean menu -->
+    <script src="assets/js/jquery.meanmenu.min.js"></script>
+    <!-- sticker js -->
+    <script src="assets/js/sticker.js"></script>
+    <!-- main js -->
+    <script src="assets/js/main.js"></script>
+    <script src="https://cdn.datatables.net/1.11.5/js/jquery.dataTables.min.js"></script>
+    <!-- DATA TABLE -->
+    <script src="assets/js/data-table-mod.js"></script>
+    <!-- MODAL LOGIN -->
+    <script src="assets/js/modal-login.js"></script>
+	
+</body>
+</html>
